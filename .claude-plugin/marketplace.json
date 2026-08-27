@@ -1,0 +1,29 @@
+{
+  "name": "cardnews-studio-plugin",
+  "owner": {
+    "name": "risingdream"
+  },
+  "metadata": {
+    "description": "Cardnews Studio 에이전트 플러그인 마켓플레이스 — 원격 MCP로 작품·리소스·카드 조회",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "cardnews-studio",
+      "source": "./plugins/cardnews-studio",
+      "description": "Cardnews Studio 원격 MCP로 작품·리소스·카드를 조회한다. 기본 범위는 works:read다.",
+      "version": "0.1.0",
+      "author": {
+        "name": "risingdream"
+      },
+      "homepage": "https://github.com/risingdream/cardnews-studio-plugin",
+      "license": "MIT",
+      "category": "productivity",
+      "keywords": [
+        "cardnews",
+        "mcp",
+        "studio"
+      ]
+    }
+  ]
+}

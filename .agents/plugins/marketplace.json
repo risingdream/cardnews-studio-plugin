@@ -1,0 +1,21 @@
+{
+  "name": "cardnews-studio-plugin",
+  "interface": {
+    "displayName": "Cardnews Studio"
+  },
+  "plugins": [
+    {
+      "name": "cardnews-studio",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cardnews-studio"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity",
+      "version": "0.1.0"
+    }
+  ]
+}

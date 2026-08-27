@@ -1,0 +1,13 @@
+{
+  "name": "cardnews-studio",
+  "displayName": "Cardnews Studio",
+  "version": "0.1.0",
+  "description": "Cardnews Studio 원격 MCP로 작품·리소스·카드를 조회한다. 기본 범위는 works:read다.",
+  "author": {
+    "name": "risingdream"
+  },
+  "homepage": "https://github.com/risingdream/cardnews-studio-plugin",
+  "repository": "https://github.com/risingdream/cardnews-studio-plugin",
+  "license": "MIT",
+  "keywords": ["cardnews", "mcp", "studio"]
+}

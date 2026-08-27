@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "cardnews-studio": {
+      "type": "http",
+      "url": "https://zent-studio.risingdream.workers.dev/mcp"
+    }
+  }
+}
