@@ -1,7 +1,7 @@
 {
   "name": "cardnews-studio",
-  "version": "0.1.0",
-  "description": "Cardnews Studio 원격 MCP로 작품·리소스·카드를 조회한다. 기본 범위는 works:read다.",
+  "version": "0.2.0",
+  "description": "Cardnews Studio 원격 MCP로 작품을 조회하고, 주제로 원문·카피·그림을 만든다. OAuth 기본 범위는 works:read, works:write, generate다.",
   "author": {
     "name": "risingdream"
   },
@@ -13,17 +13,18 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Cardnews Studio",
-    "shortDescription": "작품·리소스·카드 조회",
-    "longDescription": "Claude Code와 Codex에서 Cardnews Studio production Remote MCP에 연결한다. 인증은 클라이언트의 OAuth 동의로만 이루어지며 패키지에 토큰이나 client secret이 없다. 1차 안내는 작품·리소스·카드 조회(works:read)다.",
+    "shortDescription": "조회와 주제→카드 파이프라인",
+    "longDescription": "Claude Code와 Codex에서 Cardnews Studio production Remote MCP에 연결한다. 인증은 클라이언트의 OAuth 동의로만 이루어지며 패키지에 토큰이나 client secret이 없다. 조회(inspect-works)와 주제에서 원문·카피·그림을 만드는 파이프라인(from-topic)을 포함한다. OAuth 기본 체크는 works:read, works:write, generate다.",
     "developerName": "risingdream",
     "category": "Productivity",
-    "capabilities": ["Interactive", "Read"],
+    "capabilities": ["Interactive", "Read", "Write"],
     "websiteURL": "https://github.com/risingdream/cardnews-studio-plugin",
     "privacyPolicyURL": "https://github.com/risingdream/cardnews-studio-plugin/blob/main/PRIVACY.md",
     "defaultPrompt": [
       "내 Cardnews Studio 작품 목록을 보여줘.",
       "이 작품의 메타와 리소스를 확인해줘.",
-      "카드 이미지를 view_media로 보여줘."
+      "카드 이미지를 view_media로 보여줘.",
+      "지방세 환급 기한이라는 주제로 카드뉴스를 만들어줘."
     ],
     "brandColor": "#f43f5e"
   }

@@ -6,7 +6,7 @@ description: Cardnews Studio MCP로 조직·작품·리소스·카드를 조회�
 # 작품 조회
 
 도구는 **원격 MCP** `cardnews-studio`다. 로컬 바이너리를 설치하지 않는다.
-첫 호출에서 OAuth 동의 화면이 뜬다. 기본 체크는 `works:read`만 유지한다.
+첫 호출에서 OAuth 동의 화면이 뜬다. 플러그인 기본 체크는 `works:read` + `works:write` + `generate`다. 이 스킬은 조회 도구만 쓴다.
 
 범위: 조직 목록 → 작품 목록 → 작품 메타 → 리소스 메타 → (필요 시) 카드 PNG.
 범위 밖: 작품 저장, 리소스 생성, 카드 생성, 렌더.

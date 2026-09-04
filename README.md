@@ -1,6 +1,6 @@
 # cardnews-studio-plugin
 
-Cardnews Studio 원격 MCP와 작품 조회 스킬을 묶은 에이전트 플러그인 마켓플레이스다.
+Cardnews Studio 원격 MCP와 조회·제작 스킬을 묶은 에이전트 플러그인 마켓플레이스다.
 Claude Desktop·Claude Code·Codex가 이 주소 하나로 같은 플러그인을 설치하고 갱신한다.
 
 조회 정본은 원격 MCP `https://zent-studio.risingdream.workers.dev/mcp`다.
@@ -24,18 +24,27 @@ Claude Desktop·Claude Code·Codex가 이 주소 하나로 같은 플러그인�
 | Claude Code | `/plugin marketplace add risingdream/cardnews-studio-plugin` 후 `/plugin install cardnews-studio@cardnews-studio-plugin` |
 | Codex | `codex plugin marketplace add risingdream/cardnews-studio-plugin` 후 `codex plugin add cardnews-studio@cardnews-studio-plugin` |
 
-첫 도구 호출에서 OAuth 동의 화면이 한 번 뜬다. 기본 체크는 작품 조회(`works:read`)만이다.
+첫 도구 호출에서 OAuth 동의 화면이 한 번 뜬다. 기본 체크는 `works:read` + `works:write` + `generate`다.
 
 ## 들어 있는 것
 
 ```text
 plugins/cardnews-studio/
-  .claude-plugin/plugin.json   name cardnews-studio, 0.1.0
+  .claude-plugin/plugin.json   name cardnews-studio, 0.2.0
   .codex-plugin/plugin.json    Codex용 동일 메타
   .mcp.json                    cardnews-studio → 원격 MCP URL
   skills/inspect-works         조직·작품·리소스·카드 조회
   commands/inspect-works.md    같은 조회 커맨드
+  skills/from-topic            주제 → 원문 → 카피 → 그림 (체크포인트 3단계)
+  commands/from-topic.md       같은 제작 커맨드
 ```
+
+### 스킬
+
+| 스킬 | 하는 일 | 멈춤 |
+| --- | --- | --- |
+| `/cardnews-studio:inspect-works` | 조직·작품·리소스·카드 조회 | 조회만. 저장·생성 없음 |
+| `/cardnews-studio:from-topic <주제>` | 리서치 원문 저장 → 카드 초안 검토 → 그림 생성 | 각 체크포인트에서 사용자 승인 후 다음 단계. 저장본이 있으면 이어서 하고 새 작품을 만들지 않음 |
 
 ## 갱신
 

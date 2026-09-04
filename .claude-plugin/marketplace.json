@@ -4,15 +4,15 @@
     "name": "risingdream"
   },
   "metadata": {
-    "description": "Cardnews Studio 에이전트 플러그인 마켓플레이스 — 원격 MCP로 작품·리소스·카드 조회",
-    "version": "0.1.0"
+    "description": "Cardnews Studio 에이전트 플러그인 마켓플레이스 — 원격 MCP로 조회와 주제→카드 파이프라인",
+    "version": "0.2.0"
   },
   "plugins": [
     {
       "name": "cardnews-studio",
       "source": "./plugins/cardnews-studio",
-      "description": "Cardnews Studio 원격 MCP로 작품·리소스·카드를 조회한다. 기본 범위는 works:read다.",
-      "version": "0.1.0",
+      "description": "Cardnews Studio 원격 MCP로 작품을 조회하고 주제로 원문·카피·그림을 만든다. OAuth 기본 범위는 works:read, works:write, generate다.",
+      "version": "0.2.0",
       "author": {
         "name": "risingdream"
       },
