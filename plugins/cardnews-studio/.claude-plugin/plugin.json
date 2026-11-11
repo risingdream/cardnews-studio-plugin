@@ -1,8 +1,8 @@
 {
   "name": "cardnews-studio",
-  "displayName": "Cardnews Studio",
-  "version": "0.2.0",
-  "description": "Cardnews Studio 원격 MCP로 작품을 조회하고, 주제로 원문·카피·그림을 만든다. OAuth 기본 범위는 works:read, works:write, generate다.",
+  "displayName": "Orbit Studio",
+  "version": "0.3.0",
+  "description": "Orbit Studio 원격 MCP로 채널·콘텐츠·작품을 조회하고, 주제로 콘텐츠(소재 카드·대본·검증 표·콘티)와 카드뉴스를 만든다. OAuth 기본 범위는 works:read, works:write, generate다.",
   "author": {
     "name": "risingdream"
   },

@@ -5,9 +5,9 @@
 ## 설치 후 연결
 
 클라이언트가 플러그인을 설치하면, 사용자가 동의한 MCP OAuth로 라이브 오리진
-`https://zent-studio.risingdream.workers.dev/mcp`에 붙는다.
+`https://studio.risingdream.kr/mcp`에 붙는다.
 접근 범위는 동의 화면에서 선택한 scope와 호출 시점의 조직 멤버십이다.
-1차 안내의 기본 범위는 작품 조회(`works:read`)다.
+동의 화면의 기본 체크는 `works:read` + `works:write` + `generate`다.
 
 ## 서버가 저장하는 것
 

@@ -1,9 +1,10 @@
 # cardnews-studio-plugin
 
-Cardnews Studio 원격 MCP와 조회·제작 스킬을 묶은 에이전트 플러그인 마켓플레이스다.
+Orbit Studio(옛 Cardnews Studio) 원격 MCP와 조회·제작 스킬을 묶은 에이전트 플러그인 마켓플레이스다.
+저장소·플러그인·MCP 서버 키의 이름 `cardnews-studio`는 설치 경로라 그대로 둔다.
 Claude Desktop·Claude Code·Codex가 이 주소 하나로 같은 플러그인을 설치하고 갱신한다.
 
-조회 정본은 원격 MCP `https://zent-studio.risingdream.workers.dev/mcp`다.
+조회 정본은 원격 MCP `https://studio.risingdream.kr/mcp`다.
 이 저장소는 매니페스트·스킬·라이선스·보안 정책만 담는다. 서비스 엔진 소스는 포함하지 않는다.
 
 ### 공개 범위
@@ -30,21 +31,26 @@ Claude Desktop·Claude Code·Codex가 이 주소 하나로 같은 플러그인�
 
 ```text
 plugins/cardnews-studio/
-  .claude-plugin/plugin.json   name cardnews-studio, 0.2.0
+  .claude-plugin/plugin.json   name cardnews-studio, 0.3.0
   .codex-plugin/plugin.json    Codex용 동일 메타
   .mcp.json                    cardnews-studio → 원격 MCP URL
-  skills/inspect-works         조직·작품·리소스·카드 조회
+  skills/inspect-works         조직·채널·콘텐츠·작품·리소스·카드 조회
   commands/inspect-works.md    같은 조회 커맨드
-  skills/from-topic            주제 → 원문 → 카피 → 그림 (체크포인트 3단계)
+  skills/from-topic            주제 → 콘텐츠(소재 카드·대본·검증 표·콘티) → 카피 → 그림 → 게시 기록
   commands/from-topic.md       같은 제작 커맨드
 ```
+
+### 구조
+
+조직 > 채널(게시 계정) > 프로젝트(연작) > 콘텐츠(한 주제) > 작품(포맷별 산출물).
+콘텐츠는 소재 → 기획 → 콘티 → 제작 → 내보내기 → 게시 단계를 가지며, 소재 카드·대본·검증 표·콘티 문서가 콘텐츠에 모인다.
 
 ### 스킬
 
 | 스킬 | 하는 일 | 멈춤 |
 | --- | --- | --- |
-| `/cardnews-studio:inspect-works` | 조직·작품·리소스·카드 조회 | 조회만. 저장·생성 없음 |
-| `/cardnews-studio:from-topic <주제>` | 리서치 원문 저장 → 카드 초안 검토 → 그림 생성 | 각 체크포인트에서 사용자 승인 후 다음 단계. 저장본이 있으면 이어서 하고 새 작품을 만들지 않음 |
+| `/cardnews-studio:inspect-works` | 조직·채널·콘텐츠(단계·문서·승인·게시 기록)·작품·리소스·카드 조회 | 조회만. 저장·생성 없음 |
+| `/cardnews-studio:from-topic <주제>` | 콘텐츠를 찾거나 만들기 → 리서치(소재 카드·대본·검증 표) → 카드 초안(콘티) → 그림 생성 → 게시 기록 | 각 체크포인트에서 사용자 승인 후 다음 단계. 콘티 승인은 사람이 Studio 화면에서 하고, 승인 전에는 그림을 만들지 않음. 저장본이 있으면 이어서 하고 새 콘텐츠·작품을 만들지 않음. 게시는 사람이 하고 플러그인은 기록만 함 |
 
 ## 갱신
 

@@ -1,7 +1,7 @@
 {
   "name": "cardnews-studio-plugin",
   "interface": {
-    "displayName": "Cardnews Studio"
+    "displayName": "Orbit Studio"
   },
   "plugins": [
     {
@@ -15,7 +15,7 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity",
-      "version": "0.2.0"
+      "version": "0.3.0"
     }
   ]
 }

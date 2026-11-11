@@ -1,6 +1,6 @@
 # 보안 정책
 
-이 저장소는 Cardnews Studio 플러그인 매니페스트·스킬·원격 MCP URL만 담는다.
+이 저장소는 Orbit Studio(옛 Cardnews Studio) 플러그인 매니페스트·스킬·원격 MCP URL만 담는다.
 인증 비밀·토큰·쿠키·API 키는 패키지에 없다.
 
 ## 제보

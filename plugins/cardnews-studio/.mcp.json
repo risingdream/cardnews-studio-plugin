@@ -2,7 +2,7 @@
   "mcpServers": {
     "cardnews-studio": {
       "type": "http",
-      "url": "https://zent-studio.risingdream.workers.dev/mcp"
+      "url": "https://studio.risingdream.kr/mcp"
     }
   }
 }
